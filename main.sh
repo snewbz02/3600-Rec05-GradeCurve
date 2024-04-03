@@ -14,3 +14,11 @@ function curve {
         let "index++"
     done
 }
+
+# Check if a curve amount is provided as a command-line argument
+if [ "$#" -ne 1 ]; then
+    echo "usage: $0 <curve amount>"
+else
+    curve_amount=$1
+    grades=()
+fi
