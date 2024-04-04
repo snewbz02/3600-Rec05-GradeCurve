@@ -21,4 +21,12 @@ if [ "$#" -ne 1 ]; then
 else
     curve_amount=$1
     grades=()
+
+    # Read grades from user input
+    for ((i=1; i<=5; i++)); do
+        echo -n "Enter QUIZ #$i: "
+        read grade
+        grades[$((i-1))]="$grade"
+    done
+
 fi
