@@ -29,4 +29,7 @@ else
         grades[$((i-1))]="$grade"
     done
 
+    # Call curve function
+    curve "$curve_amount" "${grades[@]}"
+
 fi
