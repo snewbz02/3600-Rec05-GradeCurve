@@ -32,4 +32,9 @@ else
     # Call curve function
     curve "$curve_amount" "${grades[@]}"
 
+    # Print curved grades
+    echo "Curved Grades:"
+    for ((i=0; i<${#grades[@]}; i++)); do
+        echo "grades[$i] = ${grades[$i]}"
+    done
 fi
